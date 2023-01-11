@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <section class="vh-100 bg-image"
+             style="background-image: url('https://www.lironboylston.com/wp-content/uploads/2020/12/WBC_7095.jpg');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                                <form method="POST" action="register">
+                                    {% csrf_token %}
+                                    <input type="text" name="user_name" placeholder="Name"><br>
+                                    <input type="text" name="user_email" placeholder="Email"><br>
+                                    <input type="text" name="user_password" placeholder="Password"><br>
+                                    <input type="text" name="user_repeat_password" placeholder="Repeat Password"><br>
+                                    <input type="submit"><br>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="text-center">
+                <img style="width: 200px;" src="{% static 'images/india_flag.png' %}" class="rounded" alt="india_flag">
+            </div>
+        </div>
+        <div class="row g-4">
+            {% for dish in dishes %}
+                {% if dish.dish_country == country_name %}
+                    <div class="col">
+                        <div class="card shadow" style="width: 25rem;">
+                            <img src="{{ dish.image_url }}" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ dish.name }}</h5>
+                                <p class="card-text">Description: {{ dish.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

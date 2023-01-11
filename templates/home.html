@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <header>
+        <!-- Intro settings -->
+        <style>
+            /* Default height for small devices */
+            #intro-example {
+                height: 400px;
+            }
+
+            /* Height for devices larger than 992px */
+            @media (min-width: 992px) {
+                #intro-example {
+                    height: 600px;
+                }
+            }
+        </style>
+
+        <!-- Background image -->
+        <div
+                id="intro-example"
+                class="p-5 text-center bg-image"
+                style="background-image: url('https://www.lironboylston.com/wp-content/uploads/2020/12/WBC_7095.jpg');"
+        >
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                        <h1 class="mb-3">Nothing brings people together like GOOD FOOD</h1>
+                        <h5 class="mb-4">Visit a place </h5>
+                        <a
+                                class="btn btn-outline-light btn-lg m-2"
+                                href="http://127.0.0.1:8000/america"
+                                role="button"
+                                rel="nofollow"
+                        >America</a
+                        >
+                        <a
+                                class="btn btn-outline-light btn-lg m-2"
+                                href="http://127.0.0.1:8000/europa"
+                                role="button"
+                        >Europe</a
+                        >
+                        <a
+                                class="btn btn-outline-light btn-lg m-2"
+                                href="http://127.0.0.1:8000/asia"
+                                role="button"
+                        >Asia</a
+                        >
+                        <a
+                                class="btn btn-outline-light btn-lg m-2"
+                                href="http://127.0.0.1:8000/australia"
+                                role="button"
+                        >Australia</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Background image -->
+    </header>
+{% endblock %}
+
